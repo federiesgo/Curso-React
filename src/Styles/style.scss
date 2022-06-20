@@ -1,0 +1,44 @@
+.estiloNav {
+    text-align: center;
+    background-color: aqua;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+.logoNav {
+    height: 100px;
+    width: 100px;
+}
+
+.colorSpan {
+    font-weight: bolder;
+    color: rgb(247, 28, 65);
+}
+
+.colorEmpar {
+    font-weight: bolder;
+    color: black;
+}
+
+.divNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .divUlNav {
+        display: flex;
+        .ulNav {
+            list-style: none;
+            display: flex;
+            .liNav {
+                padding-right: 10px;
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
