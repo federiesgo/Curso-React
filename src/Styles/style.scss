@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .estiloNav {
     text-align: center;
     background-color: aqua;
@@ -24,6 +29,7 @@
 }
 
 .divNav {
+    background-color: antiquewhite;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -41,4 +47,23 @@
             }
         }
     }
+}
+
+.cartBtn {
+    background: none;
+    color: black;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.greeting {
+    background-color: rgb(209, 166, 109);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
 }

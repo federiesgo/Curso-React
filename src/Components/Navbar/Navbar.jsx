@@ -2,6 +2,7 @@ import React from "react";
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import logo from "../../img/logo.png"
+import CartWidget from "./CartWidget.jsx";
 
 
 
@@ -9,7 +10,8 @@ import logo from "../../img/logo.png"
 
 export const Navbar = () => {
     return  (
-        <div className="divNav">
+        <>
+        <nav className="divNav">
             <a id="logo">
                 <img className="logoNav" src={logo} alt="" />
                 <h1 className="colorEmpar">
@@ -30,10 +32,14 @@ export const Navbar = () => {
                     </Link>
                     <Link underline="hover" color="black" href="#">
                      Pestañas
+                    </Link>
+                    <Link>
+                    <CartWidget />
                     </Link>                    
                 </Breadcrumbs>
             </div>
             </div>
-        </div>
+        </nav>
+        </>
     ) 
 };
