@@ -1,0 +1,20 @@
+.componente {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.centrado {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+
+.textoCentrado {
+    text-align: center;
+}
+
+.marginCantidad {
+    margin-bottom: -200px;
+}
