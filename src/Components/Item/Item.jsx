@@ -1,42 +1,37 @@
-import * as React from 'react';
+import React from "react";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, CardActions } from '@mui/material';
-import esmalte from '../../img/esmalte.png'
 import { ItemCount } from '../ItemCount/ItemCount';
-import "./Carta.scss"
+import "../Card/Carta.scss"
 
-
-
-export const Carta = ({cantidad, product}) =>{
-  
-
-  return (
-    <div className='centradoCartas'>
+const Item = ({ product }) => {
+    return (        
+        <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 py-5'>
         <Card sx={{ maxWidth: 450 }}>
           <CardActionArea>
             <CardMedia
               component="img"
               height="450"
-              image={esmalte}
-              alt="Esmalte"
+              image={product.img}
+              alt={product.name}
             />
             <CardContent>
               <Typography className='textoCentrado' gutterBottom variant="h5" component="div">
-                Esmalte
+              {product.name}
               </Typography>
               <Typography className='textoCentrado' variant="body2" color="text.secondary">
-                El esmalte Sally Hansen se utiliza como primer paso de esmaltado dejando una separación
-                 de un milímetro entre cutícula y producto sellando el borde libre. 
+              {product.desciption} 
               </Typography>              
             </CardContent>
             </CardActionArea>           
             <CardActions>
-                <ItemCount stock={cantidad} />
+                <ItemCount stock={product.stock} />
             </CardActions>          
         </Card>
     </div>
-  )
+    )
 }
+export default Item;
