@@ -10,9 +10,9 @@ function App() {
       <Navbar/>
       <ItemListContainer greeting={"Bienvenido a EmparSpa"}/>
       <div className='centrado-cartas'>
-        <Carta cantidad={15}/>
-        <Carta cantidad={9}/> 
-        <Carta cantidad={25}/> 
+        <Carta cantidad={15} />
+        <Carta cantidad={9} /> 
+        <Carta cantidad={25} /> 
       </div>              
     </div>
   );

@@ -8,10 +8,11 @@ import esmalte from '../../img/esmalte.png'
 import { ItemCount } from '../ItemCount/ItemCount';
 import "./Carta.scss"
 
-
 export const Carta = ({cantidad}) =>{
+  const onAdd = () => {
+    console.log("En desarrollo");
+      }
   
-
   return (
     <div className='centradoCartas'>
         <Card sx={{ maxWidth: 450 }}>
@@ -33,7 +34,7 @@ export const Carta = ({cantidad}) =>{
             </CardContent>
             </CardActionArea>           
             <CardActions>
-                <ItemCount stock={cantidad} />
+                <ItemCount stock={cantidad} initial={1} onAdd={onAdd}/>
             </CardActions>          
         </Card>
     </div>
