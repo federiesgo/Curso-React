@@ -9,7 +9,7 @@ import "../Card/Carta.scss"
 
 const Item = ({ product }) => {
     return (        
-        <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 py-5'>
+        <div className='col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 py-5'>
         <Card sx={{ maxWidth: 450 }}>
           <CardActionArea>
             <CardMedia
