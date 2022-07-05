@@ -23,7 +23,7 @@ const Item = ({ product }) => {
               {product.name}
               </Typography>
               <Typography className='textoCentrado' variant="body2" color="text.secondary">
-              {product.desciption} 
+              {product.description} 
               </Typography>              
             </CardContent>
             </CardActionArea>           
