@@ -31,28 +31,30 @@ const categories = [
 
 const Navbar = () => {
     return (
-        
-            <nav className="divNav">
+
+        <nav className="divNav">
+            <Link className="logo" to={'/'}>
                 <a id="logo">
                     <img className="logoNav" src={logo} alt="" />
                     <h1 className="colorEmpar">
                         EMPAR<span className="colorSpan">SPA</span>
                     </h1>
                 </a>
-                <div className="divUlNav">
-                    <div role="presentation">
-                        <Breadcrumbs maxItems={4} aria-label="breadcrumb">
-                            <ul>
-                                {categories.map((cat) => (
-                                    <Link to={cat.path} key={cat.id} underline="hover" color="black" >{cat.name}</Link>
-                                ))}
-                            </ul>
-                            <CartWidget />
-                        </Breadcrumbs>
-                    </div>
+            </Link>
+            <div className="divUlNav">
+                <div role="presentation">
+                    <Breadcrumbs maxItems={4} aria-label="breadcrumb">
+                        <ul>
+                            {categories.map((cat) => (
+                                <Link to={cat.path} key={cat.id} underline="hover" color="black" >{cat.name}</Link>
+                            ))}
+                        </ul>
+                        <CartWidget />
+                    </Breadcrumbs>
                 </div>
-            </nav>
-        
+            </div>
+        </nav>
+
     )
 };
 
