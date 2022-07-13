@@ -25,16 +25,11 @@ export const ItemCount = ({ stock }) => {
         <Button variant="outlined" onClick={() => onAdd(-1)} startIcon={<RemoveIcon />}>
           Quitar
         </Button>
-        <span>{amount}</span>
+        <span className='ml-1'>{amount}</span>
         <Button variant="contained" onClick={() => onAdd(+1)} endIcon={<AddIcon />}>
           Agregar
         </Button>
-      </div>
-      <div>
-        <Typography py={5} className='textoCentrado' gutterBottom variant="h5" component="div">
-          Stock: {stock}
-        </Typography>
-      </div>
+      </div>      
     </div>
   )
 }

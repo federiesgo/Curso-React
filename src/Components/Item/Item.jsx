@@ -29,8 +29,7 @@ const Item = ({ product }) => {
           </CardContent>
         </CardActionArea>
         <CardActions className="textoCentrado">
-          <div className="textoCentrado">
-            <ItemCount stock={product.stock} />
+          <div className="textoCentrado">           
             <Link to={`/detail/${product.id}`}> Ver detalle </Link>
           </div>
         </CardActions>
