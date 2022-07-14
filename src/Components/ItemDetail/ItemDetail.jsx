@@ -8,14 +8,20 @@ import { CardActionArea, CardActions } from '@mui/material';
 import { Button } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { ItemCount } from "../ItemCount/ItemCount";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { ItemContext } from '../../CartContext/CartContext'
+
 
 const ItemDetail = ({ product }) => {
 
+
+    const { addItem } = useContext(ItemContext);
     const [buyFinished, setBuyFinished] = useState(false);
 
-    const onAdd = () => {
+
+    const onAdd = (amount) => {
+        addItem({ ...product, quantity: amount })
         setBuyFinished(true);
     }
 
@@ -83,11 +89,8 @@ const ItemDetail = ({ product }) => {
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
-                            <ItemCount stock={product.stock} />
                             <CardActions className='centrado-cartas'>
-                                <Button variant="contained" onClick={() => onAdd()} endIcon={<AddShoppingCartIcon />}>
-                                    Agregar al carrito
-                                </Button>
+                                <ItemCount stock={product.stock} onAdd={onAdd}/>
                             </CardActions>
                         </Card>
                     </div>}

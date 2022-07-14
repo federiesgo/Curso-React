@@ -34,12 +34,12 @@ const Navbar = () => {
 
         <nav className="divNav">
             <Link className="logo" to={'/'}>
-                <a id="logo">
+                <span id="logo">
                     <img className="logoNav" src={logo} alt="" />
                     <h1 className="colorEmpar">
                         EMPAR<span className="colorSpan">SPA</span>
                     </h1>
-                </a>
+                </span>
             </Link>
             <div className="divUlNav">
                 <div role="presentation">
