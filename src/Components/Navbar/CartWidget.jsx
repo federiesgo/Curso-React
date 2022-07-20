@@ -10,7 +10,7 @@ const CartWidget = () => {
     return (
         <>
             <ShoppingCartIcon color="primary" fontSize="small" />
-            <p>{productQty}</p>
+            {productQty>0 ? <p>{productQty}</p> : <p></p>}
         </>
 
     )

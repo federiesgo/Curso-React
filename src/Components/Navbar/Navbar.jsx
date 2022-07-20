@@ -49,7 +49,7 @@ const Navbar = () => {
                                 <Link to={cat.path} key={cat.id} underline="hover" color="black" >{cat.name}</Link>
                             ))}
                         </ul>
-                        <CartWidget />
+                        <Link className="logo" to={"/cart"}> <CartWidget /> </Link>
                     </Breadcrumbs>
                 </div>
             </div>

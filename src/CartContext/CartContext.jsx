@@ -14,22 +14,29 @@ const CartCustomProvider = ({ children }) => {
         setProductQty(quantity)
     }
 
+    const getFinalPrice = () => {
+        return products.reduce(
+            (acum, actual) => acum + actual.price * actual.quantity,
+            0
+        );
+    };
+
     useEffect(() => {
         getProductQty();
     }, [products])
-    
+
 
     let addItem = (product) => {
-        if(isInCart(product.id)){
+        if (isInCart(product.id)) {
             const found = products.find(p => p.id === product.id);
             const index = products.indexOf(found);
             const aux = [...products];
             aux[index].quantity += product.quantity;
             setProducts(aux);
-        }else{
+        } else {
             setProducts([...products, product])
-        }        
-    }    
+        }
+    }
 
     let removeItem = (id) => {
         setProducts(products.filter(product => product.id !== id));
@@ -47,7 +54,7 @@ const CartCustomProvider = ({ children }) => {
     }
 
     return (
-        <Provider value={{ products, addItem, removeItem, isInCart, clear, productQty }}>
+        <Provider value={{ products, addItem, removeItem, isInCart, clear, productQty, getFinalPrice }}>
             {children}
         </Provider>
 
