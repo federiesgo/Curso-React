@@ -7,7 +7,7 @@ import { ItemContext } from "../../CartContext/CartContext";
 const Cart = () => {
     const { products, removeItem, clear, productQty, getFinalPrice } = useContext(ItemContext);
     return (
-        <div>
+        <>
             <div>
                 {products.map((product) => (
                     <div className="carrito-estilo" key={product.id}>
@@ -33,7 +33,7 @@ const Cart = () => {
                 }
             </div>
             <h2 style={{textAlign: 'center'}}>Precio final: ${getFinalPrice()}</h2>
-        </div>
+        </>
     )
 }
 
