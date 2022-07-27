@@ -1,20 +1,25 @@
 import './Styles/style.scss';
-import {Navbar} from './Components/Navbar/Navbar.jsx';
+import Navbar from './Components/Navbar/Navbar.jsx';
 import ItemListContainer from './Containers/ItemListContainer';
-import { Carta } from './Components/Card/Carta.jsx';
+import ItemDetailContainer from './Containers/ItemDetailContainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Cart from './Components/Cart/Cart';
+import CartCustomProvider from './CartContext/CartContext';
 
 
 function App() {
   return (
-    <div>
-      <Navbar/>
-      <ItemListContainer greeting={"Bienvenido a EmparSpa"}/>
-      <div className='centrado-cartas'>
-        <Carta cantidad={15}/>
-        <Carta cantidad={9}/> 
-        <Carta cantidad={25}/> 
-      </div>              
-    </div>
+    <BrowserRouter>
+      <CartCustomProvider >
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<ItemListContainer greeting={"Bienvenido a EmparSpa"} />} />
+          <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Bienvenido a EmparSpa"} />} />
+          <Route path='/detail/:id' element={<ItemDetailContainer />} />
+          <Route path='/Cart' element={<Cart />} />
+        </Routes>
+      </CartCustomProvider>
+    </BrowserRouter>
   );
 }
 

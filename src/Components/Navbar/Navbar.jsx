@@ -1,45 +1,61 @@
 import React from "react";
 import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
-import logo from "../../img/logo.png"
+import { Link } from 'react-router-dom';
+import logo from "../../img/logo.png";
 import CartWidget from "./CartWidget.jsx";
 
 
+const categories = [
+    {
+        id: 1,
+        path: '/',
+        name: 'Home'
+    },
+    {
+        id: 2,
+        path: '/category/masajes',
+        name: 'Masajes'
+    },
+    {
+        id: 3,
+        path: '/category/manicura',
+        name: 'Manicura'
+    },
+    {
+        id: 4,
+        path: '/category/pestanias',
+        name: 'Pestañas'
+    }
+]
 
 
+const Navbar = () => {
+    return (
 
-export const Navbar = () => {
-    return  (
-        <>
         <nav className="divNav">
-            <a id="logo">
-                <img className="logoNav" src={logo} alt="" />
-                <h1 className="colorEmpar">
-                EMPAR<span className="colorSpan">SPA</span>
-            </h1>
-            </a>            
+            <Link className="logo" to={'/'}>
+                <span id="logo">
+                    <img className="logoNav" src={logo} alt="" />
+                    <h1 className="colorEmpar">
+                        EMPAR<span className="colorSpan">SPA</span>
+                    </h1>
+                </span>
+            </Link>
             <div className="divUlNav">
-            <div role="presentation">
-                <Breadcrumbs maxItems={2} aria-label="breadcrumb">
-                    <Link underline="hover" color="black" href="#">
-                    Home
-                    </Link>
-                     <Link underline="hover" color="black" href="#">
-                    Masajes
-                    </Link>
-                    <Link underline="hover" color="black" href="#">
-                    Manicura
-                    </Link>
-                    <Link underline="hover" color="black" href="#">
-                     Pestañas
-                    </Link>
-                    <Link>
-                    <CartWidget />
-                    </Link>                    
-                </Breadcrumbs>
-            </div>
+                <div role="presentation">
+                    <Breadcrumbs maxItems={4} aria-label="breadcrumb">
+                        <ul>
+                            {categories.map((cat) => (
+                                <Link to={cat.path} key={cat.id} underline="hover" color="black" >{cat.name}</Link>
+                            ))}
+                        </ul>
+                        <Link className="logo" to={"/cart"}> <CartWidget /> </Link>
+                    </Breadcrumbs>
+                </div>
             </div>
         </nav>
-        </>
-    ) 
+
+    )
 };
+
+export default Navbar;

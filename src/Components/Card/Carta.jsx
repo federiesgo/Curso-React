@@ -9,7 +9,8 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import "./Carta.scss"
 
 
-export const Carta = ({cantidad}) =>{
+
+export const Carta = ({cantidad, product}) =>{
   
 
   return (
@@ -24,7 +25,7 @@ export const Carta = ({cantidad}) =>{
             />
             <CardContent>
               <Typography className='textoCentrado' gutterBottom variant="h5" component="div">
-                Esmalte Gel Color Rosa
+                Esmalte
               </Typography>
               <Typography className='textoCentrado' variant="body2" color="text.secondary">
                 El esmalte Sally Hansen se utiliza como primer paso de esmaltado dejando una separación
