@@ -15,22 +15,24 @@ const Cart = () => {
 
 
     const checkout = (valoresInput) => {
-        const salesCollection = collection(db, 'ventas');
-        addDoc(salesCollection, {
-            buyer: {
-                nombre: valoresInput.nombre,
-                telefono: valoresInput.telefono,
-                email: valoresInput.email
-            },
-            items: { products },
-            date: serverTimestamp(),
-            total: getFinalPrice(),
-        })
-            .then((result) => {
-                setSaleId(result.id)
-            }
-            );
-        clear()
+        if(valoresInput != undefined){
+            const salesCollection = collection(db, 'ventas');
+            addDoc(salesCollection, {
+                buyer: {
+                    nombre: valoresInput.nombre,
+                    telefono: valoresInput.telefono,
+                    email: valoresInput.email
+                },
+                items: { products },
+                date: serverTimestamp(),
+                total: getFinalPrice(),
+            })
+                .then((result) => {
+                    setSaleId(result.id)
+                }
+                );
+            clear()
+        }       
     }
 
     const ErrorSchema = Yup.object().shape({
@@ -59,7 +61,7 @@ const Cart = () => {
                         <Formik initialValues={{
                             nombre: "",
                             telefono: "",
-                            email: ""
+                            email: "",
                         }} onSubmit={(valoresInput => {
                             checkout(valoresInput);
                             setValidar(true);
