@@ -48,9 +48,10 @@ const CartCustomProvider = ({ children }) => {
         return found ? true : false;
     }
 
-    let clear = () => {
+    let clear = (pepe) => {
         setProducts([]);
         setProductQty(0);
+        console.log(pepe);
     }
 
     return (
