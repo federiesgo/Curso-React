@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea, CardActions } from '@mui/material';
 import { ItemCount } from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
-import "../Card/Carta.scss"
 
 const Item = ({ product }) => {
   return (

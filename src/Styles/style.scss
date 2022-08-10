@@ -3,6 +3,38 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: red;
+}
+
+nav {
+    a {
+        color: white !important;
+        text-decoration: none !important;
+        display: block !important;
+    }
+}
+
+ul {
+    a {
+        margin-top: 2rem;
+    }
+    a:hover {
+        color: red !important;
+    }
+}
+
+#ver-carrito {
+    margin-top: 120%;
+}
+
+.navbar-ul-fix {
+    display: flex !important;
+    justify-content: space-evenly !important;
+    display: block !important;
+}
+
 .estiloNav {
     text-align: center;
     background-color: aqua;
@@ -11,6 +43,11 @@
 #logo {
     display: flex;
     align-items: center;
+}
+
+.logo {
+    display: flex !important;
+    justify-content: flex-end;
 }
 
 .logoNav {

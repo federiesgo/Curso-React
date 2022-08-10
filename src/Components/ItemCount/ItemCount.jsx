@@ -25,7 +25,7 @@ export const ItemCount = ({ stock, onAdd }) => {
 
   return (
     <>
-      <div className='componente'>
+      {/* <div className='componente'>
         <div className='centrado'>
           <Button variant="outlined" onClick={() => addAndRemove(-1)} startIcon={<RemoveIcon />}>
             Quitar
@@ -34,6 +34,28 @@ export const ItemCount = ({ stock, onAdd }) => {
           <Button variant="contained" onClick={() => addAndRemove(+1)} endIcon={<AddIcon />}>
             Agregar
           </Button>
+          <Button disabled={amount === 0 ? true : false} variant="contained" onClick={() => onAdd(amount)} endIcon={<AddShoppingCartIcon />}>
+            Agregar al carrito
+          </Button>
+        </div>
+      </div> */}
+
+      <div className="row">
+        <div className="col-6 col-md-6 d-flex justify-content-center">
+          <Button variant="outlined" onClick={() => addAndRemove(-1)} startIcon={<RemoveIcon />}>
+            Quitar
+          </Button>
+        </div>
+
+        <div className="col-6 col-md-6 d-flex justify-content-center">
+          <Button variant="contained" onClick={() => addAndRemove(+1)} endIcon={<AddIcon />}>
+            Agregar
+          </Button>
+        </div>
+
+        <div className="col-12 col-md-12 d-flex justify-content-center my-5"><span className='ml-1'>{amount}</span> </div>
+
+        <div className="col-12 col-md-12 d-flex justify-content-center">
           <Button disabled={amount === 0 ? true : false} variant="contained" onClick={() => onAdd(amount)} endIcon={<AddShoppingCartIcon />}>
             Agregar al carrito
           </Button>

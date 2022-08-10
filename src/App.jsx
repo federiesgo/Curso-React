@@ -13,8 +13,8 @@ function App() {
       <CartCustomProvider >
         <Navbar />
         <Routes>
-          <Route path='/' element={<ItemListContainer greeting={"Bienvenido a EmparSpa"} />} />
-          <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Bienvenido a EmparSpa"} />} />
+          <Route path='/' element={<ItemListContainer greeting={"Bienvenido a EmparGaming"} />} />
+          <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Bienvenido a EmparGaming"} />} />
           <Route path='/detail/:id' element={<ItemDetailContainer />} />
           <Route path='/Cart' element={<Cart />} />
         </Routes>

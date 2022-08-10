@@ -44,13 +44,13 @@ const ItemDetail = ({ product }) => {
                                         {product.name}
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        {product.description}
+                                        {product.detail}
                                     </Typography>
                                     <Typography className='mt-5' variant="body2" color="text.primary">
-                                        Precio:{product.price}
+                                        Precio: ${product.price}
                                     </Typography>
                                     <Typography className='mb-5' variant="body2" color="text.primary">
-                                        Stock: {product.stock}
+                                        Stock: {product.stock} Unidades
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
@@ -66,11 +66,11 @@ const ItemDetail = ({ product }) => {
 
 
                     : <div className='centrado-cartas'>
-                        <Card sx={{ maxWidth: 900 }}>
+                        <Card sx={{ maxWidth: 500 }}>
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    height="900"
+                                    height="500"
                                     image={product.img}
                                     alt={product.name}
                                 />
@@ -79,13 +79,13 @@ const ItemDetail = ({ product }) => {
                                         {product.name}
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        {product.description}
+                                        {product.detail}
                                     </Typography>
                                     <Typography className='mt-5' variant="body2" color="text.primary">
-                                        Precio:{product.price}
+                                        Precio: ${product.price}
                                     </Typography>
                                     <Typography className='mb-5' variant="body2" color="text.primary">
-                                        Stock: {product.stock}
+                                        Stock: {product.stock} Unidades
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
