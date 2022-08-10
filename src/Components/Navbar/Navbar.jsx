@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import logo from "../../img/logo.png";
 import CartWidget from "./CartWidget.jsx";
 
-
 const categories = [
     {
         id: 1,
@@ -26,7 +25,6 @@ const categories = [
         name: 'Mouses'
     }
 ]
-
 
 const Navbar = () => {
     return (        
@@ -60,8 +58,6 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
-
-
     )
 };
 

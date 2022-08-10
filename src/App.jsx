@@ -7,8 +7,6 @@ import Cart from './Components/Cart/Cart';
 import CartCustomProvider from './CartContext/CartContext';
 import Footer from './Components/Footer/Footer';
 
-
-
 function App() {
   return (
     <BrowserRouter>

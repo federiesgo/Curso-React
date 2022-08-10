@@ -10,7 +10,6 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true);
     const { id } = useParams();
 
-
     useEffect(() => {
         const productsCollection = collection(db, "productos");
         const refDoc = doc(productsCollection, id)
@@ -24,7 +23,6 @@ const ItemDetailContainer = () => {
             .catch((error) => <h1>Ha ocurrido un error</h1>)
             .finally(() => setLoading(false))
     }, [id])
-
 
     return (
         <>

@@ -4,7 +4,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, CardActions } from '@mui/material';
-import { ItemCount } from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 
 const Item = ({ product }) => {

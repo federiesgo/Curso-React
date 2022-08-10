@@ -101,7 +101,6 @@ const Cart = () => {
                                     return (
                                         <Form className={'m-auto w-50 center-form'}>
                                             <div className="row">
-
                                                 <label>Nombre: </label>
                                                 <Field name={'nombre'} type={'text'} className={'w-100 form-control'} />
                                                 <small className={'error'}>{props.errors.nombre}</small>
@@ -118,7 +117,6 @@ const Cart = () => {
                                                 <div className="col-12 col-md-12 d-flex justify-content-center my-1">
                                                     <button onClick={() => clear(props)} className={'btn btn-outline-danger w-50 mb-5'} type={'reset'}> Vaciar Carrito</button>
                                                 </div>
-
                                             </div>
                                         </Form>
                                     )

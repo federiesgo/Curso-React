@@ -12,13 +12,10 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { ItemContext } from '../../CartContext/CartContext'
 
-
 const ItemDetail = ({ product }) => {
-
 
     const { addItem } = useContext(ItemContext);
     const [buyFinished, setBuyFinished] = useState(false);
-
 
     const onAdd = (amount) => {
         addItem({ ...product, quantity: amount })
@@ -63,7 +60,6 @@ const ItemDetail = ({ product }) => {
                             </CardActions>
                         </Card>
                     </div>
-
 
                     : <div className='centrado-cartas'>
                         <Card sx={{ maxWidth: 500 }}>

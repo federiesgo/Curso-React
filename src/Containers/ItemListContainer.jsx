@@ -10,9 +10,7 @@ const ItemListContainer = ({ greeting }) => {
     const [loading, setLoading] = useState(true);
     const { categoryId } = useParams();
 
-
     useEffect(() => {
-
         const q = categoryId
             ? query(collection(db, 'productos'), where("category", "==", categoryId))
             : collection(db, 'productos');
@@ -30,7 +28,6 @@ const ItemListContainer = ({ greeting }) => {
             .catch((error) => <h1>Ha ocurrido un error</h1>)
             .finally(() => setLoading(false))
     }, [categoryId])
-
 
     return (
         <>
