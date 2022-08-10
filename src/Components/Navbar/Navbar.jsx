@@ -55,7 +55,7 @@ const Navbar = () => {
                                 <Link to={cat.path} key={cat.id} decoration="none" color="inherit" >{cat.name}</Link>
                             ))}
                         </ul>
-                        <Link id="ver-carrito" className="logo" to={"/cart"}> <CartWidget /> </Link>
+                        <Link id="ver-carrito" className="logo" to={"/cart"}> <button className={'btn btn-outline-success'}><CartWidget />Ver carrito</button> </Link>
                     </div>
                 </div>
             </div>

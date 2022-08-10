@@ -31,11 +31,11 @@ const ItemDetail = ({ product }) => {
                 buyFinished
                     ?
                     <div className='centrado-cartas'>
-                        <Card sx={{ maxWidth: 900 }}>
+                        <Card sx={{ maxWidth: 500 }}>
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    height="900"
+                                    height="500"
                                     image={product.img}
                                     alt={product.name}
                                 />

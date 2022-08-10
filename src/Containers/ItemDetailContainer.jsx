@@ -28,7 +28,15 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            {loading ? <p>Loading . . .</p> : <ItemDetail product={product} />}
+            {loading
+                ?
+                <div className="d-flex justify-content-center">
+                    <div className="spinner-border my-5" role="status">
+                        <span className="sr-only"></span>
+                    </div>
+                </div>
+                :
+                <ItemDetail product={product} />}
         </>
     )
 }

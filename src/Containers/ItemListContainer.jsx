@@ -35,7 +35,15 @@ const ItemListContainer = ({ greeting }) => {
     return (
         <>
             <div className="greeting">{greeting}</div>
-            {loading ? <p>Loading . . .</p> : <ItemList productList={productList} />}
+            {loading
+                ?
+                <div className="d-flex justify-content-center">
+                    <div className="spinner-border my-5" role="status">
+                        <span className="sr-only"></span>
+                    </div>
+                </div>
+                :
+                <ItemList productList={productList} />}            
         </>
     )
 }
