@@ -14,9 +14,9 @@ Este proyecto esta compuesto por:
 ##Pasos para reproducir el proyecto:
 1. Clona el repo
     ```URL: https://github.com/federiesgo/Curso-React/tree/ProyectoFinal ```
-2. Realiza un npm i
+2. Realiza un
     ```npm i```
-3. Realiza un npm start
+3. Realiza un
     ```npm start```
 
 ##El proyecto esta hosteado en Netlify
