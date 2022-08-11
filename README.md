@@ -21,3 +21,6 @@ Este proyecto esta compuesto por:
 
 ##El proyecto esta hosteado en Netlify
 * ```https://empar-gaming.netlify.app```
+
+Video de la web funcionando en caso de que crashee la db:
+https://youtu.be/8XgxcFeJUjo
