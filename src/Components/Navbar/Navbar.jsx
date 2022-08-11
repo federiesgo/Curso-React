@@ -27,7 +27,7 @@ const categories = [
 ]
 
 const Navbar = () => {
-    return (        
+    return (
 
         <nav className="navbar navbar-dark bg-dark">
             <div className="container-fluid">
@@ -50,7 +50,9 @@ const Navbar = () => {
                     <div className="offcanvas-body">
                         <ul className="navbar-ul-fix">
                             {categories.map((cat) => (
-                                <Link to={cat.path} key={cat.id} decoration="none" color="inherit" >{cat.name}</Link>
+                                <div key={cat.id} data-bs-dismiss="offcanvas">
+                                    <Link to={cat.path} decoration="none" color="inherit" >{cat.name}</Link>
+                                </div>
                             ))}
                         </ul>
                         <Link id="ver-carrito" className="logo" to={"/cart"}> <button className={'btn btn-outline-success'}><CartWidget />Ver carrito</button> </Link>
